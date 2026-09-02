@@ -24,9 +24,9 @@ ul {
 img {
   max-width: 100%;
 }
-/* Utility Classses */
+/* Utility Classes */
 .bg-primary {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   color: #333;
 }
 .bg-dark {
@@ -35,6 +35,20 @@ img {
 }
 .bg-dark .bg-primary {
   padding: 0 0.3rem;
+}
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.section-heading {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 40px;
 }
 .btn {
   display: inline-block;
@@ -48,20 +62,6 @@ img {
 .btn:hover {
   background: #333;
   color: #fff;
-}
-.section-heading {
-  font-size: 1.6rem;
-  text-align: center;
-  margin-bottom: 40px;
-}
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
 }
 /* Container */
 .container {
@@ -98,14 +98,14 @@ img {
   background-color: var(--primary-color);
 }
 .current {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   font-weight: 600;
 }
 /* Hero */
 .hero {
   height: 500px;
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   text-align: center;
 }
@@ -114,11 +114,12 @@ img {
   line-height: 1.4;
   font-weight: normal;
 }
+/* Gallery */
 .gallery-flex {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
 }
 .gallery-item {
   width: calc(33.333% - 20px);
@@ -130,7 +131,7 @@ img {
 .gallery-item:hover {
   opacity: 0.9;
 }
-/* Footer  */
+/* Footer */
 .footer {
   border-top: 1px solid #aaa;
   padding: 2rem 1.5rem;
@@ -161,7 +162,7 @@ img {
   gap: 2rem;
 }
 .service-item h4 {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   margin-bottom: 0.7rem;
 }
 /* Team */
@@ -175,7 +176,7 @@ img {
 .team img {
   border-radius: 10px;
 }
-/* Contact */
+/* Contact Page */
 .contact {
   padding: 3rem 0 4rem;
 }
@@ -205,21 +206,20 @@ img {
 .contact button {
   width: 100%;
 }
-/* Media Queries */
-@media(max-width: 768px) {
-  .header  .header-flex,
+/* MEdia Query */
+@media(max-width:768px) {
+  .header .header-flex,
   .footer .footer-flex,
   .services .services-flex,
   .team .team-flex {
     flex-direction: column;
     gap: 1.5rem;
   }
-
   .hero {
     height: 300px;
   }
   .hero h2 {
-    font-size: 1.8rem;
+    font-size: 1.8rem
   }
   .gallery-item {
     width: calc(50% - 20px);
